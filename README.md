@@ -45,4 +45,62 @@ Key characteristics and data quality notes:
 </p>
 
 **Key Insights:**
-- Planned RRR ranged from 2.4 to 3.0 across all environments — the trading strategy itself has a
+- Planned RRR ranged from 2.4 to 3.0 across all environments — the trading strategy itself has a reasonable theoretical edge on paper.
+- Realized RRR fell far short of the plan in every environment, and turned negative (-0.12) in the Live Funded Account.
+- The gap between planned and realized performance grows as the environment becomes more real: smallest in Backtesting, largest in the Live Funded Account.
+
+---
+
+## Phase 2 – Performance by Environment
+
+<p align="center">
+  <img src="visuals/performance_by_environment.png" alt="Performance by Environment" width="700">
+</p>
+
+**Key Insights:**
+- The Live Funded Account is the weakest environment overall: the lowest win rate (32.9%), the lowest realized RRR, and the only environment with a net loss (-737€), despite having the largest number of trades (70).
+- Average risk per trade increased substantially across environments (58€ in Backtesting vs. 96€ in the Live Funded Account) — absolute profit comparisons across environments should be read with this in mind, since larger position sizes produce larger euro swings regardless of skill.
+
+---
+
+## Phase 3 – Post-Loss Sequence
+
+<p align="center">
+  <img src="visuals/post_loss_sequence.png" alt="Post-Loss Sequence" width="700">
+</p>
+
+**Key Insights:**
+- Win rate drops noticeably after a loss in Demo and Live Funded Account (e.g. 47.8% → 26.1% in the live account) — a possible sign of reduced discipline following a loss.
+- Backtesting shows the opposite pattern, consistent with the absence of real money or emotional pressure in that environment.
+- With 158 trades total, this should be treated as a hypothesis to monitor, not a proven pattern.
+
+---
+
+## Conclusions
+
+- The planned RRR (2.4–3.0) suggests the strategy itself has a reasonable theoretical edge, but execution consistently fails to deliver it.
+- The gap between planned and realized performance grows as the environment becomes more real — smallest in Backtesting, largest in the Live Funded Account.
+- The main problem isn't strategy selection, it's discipline in execution — sticking to planned take-profit and stop-loss levels rather than exiting early.
+- The post-loss win rate drop (Demo and Live Funded Account) is a discipline signal worth monitoring, not a proven pattern — the sample size is too small to be conclusive.
+
+---
+
+## Next Steps
+
+- Build an interactive dashboard (Power BI) for deeper exploration.
+- Investigate whether early exits avoided larger losses or gave up real gains, by cross-referencing trade exits with historical market price data.
+- Expand the dataset with 2022 and 2025 records, if they become available.
+
+---
+
+## Project Status
+
+In progress — data cleaning and exploratory analysis complete; dashboard pending.
+
+---
+
+## Author
+
+Gabriela Rijo
+Aspiring Data Analyst
+Based in Ireland
