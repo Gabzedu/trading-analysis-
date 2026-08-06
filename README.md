@@ -101,6 +101,15 @@ Key characteristics and data quality notes:
 
 ---
 
+## Limitations
+
+- Small sample size (158 trades total, some environments with as few as 20).
+- Data covers 2023–2024 only. No records for 2022 or 2025 were available for this project.
+- This was my first structured trading journal, so the raw data contained manual entry inconsistencies.
+- The analysis identifies *that* execution falls short of the plan, but not *why*.
+
+---
+
 ## Next Steps
 
 - Investigate whether early exits avoided larger losses or gave up real gains, by cross-referencing trade exits with historical market price data.
@@ -111,5 +120,7 @@ Key characteristics and data quality notes:
 ## Author
 
 Gabriela Rijo
+
 Aspiring Data Analyst
+
 Based in Ireland
