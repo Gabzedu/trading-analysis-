@@ -1,14 +1,19 @@
 # Trading Study Analysis (2023–2024)
 
-## Project Overview
+## Problem Statement
 
 This project analyzes my personal trading activity during my early trading study period, covering trades recorded between 2023 and 2024, before I shifted focus to Data Analytics.
 
 The goal is to investigate execution quality and decision-making during this beginning phase, focusing on the gap between planned and actual outcomes rather than overall profitability — and to apply a real data cleaning and analysis workflow to a messy, real-world dataset.
 
+**Key questions:**
+- How does my realized Risk-Reward Ratio (RRR) compare to the RRR I originally planned for each trade?
+- How does performance vary across different account/environment types (backtesting, demo, and live funded accounts)?
+- Is there a measurable change in performance immediately following a losing trade (post-loss sequence)?
+
 ---
 
-## Data Description
+## Data 
 
 The dataset contains manually recorded trading data collected between January 2023 and August 2024, originally spread across two separate Excel files (one per year) and merged into a single dataset for this analysis.
 
@@ -30,18 +35,22 @@ Key characteristics and data quality notes:
 
 ---
 
-## Tools & Technologies
-
-- Python (Pandas, NumPy, Matplotlib)
-- Google Colab
-- Excel
+## Data Cleaning & Transformation
+- Translated column headers from Portuguese to English
+- Rounded monetary values to cents (account funds, risk, profit, net profit)
+- Grouped 9 raw account/environment labels into 3 consistent categories: Backtesting, Demo, and Live Funded Account
+- Standardized inconsistent capitalization across categorical fields (trade result, direction, product names)
+- Fixed spelling typos in date fields and converted entry dates from  written Portuguese text into proper date values
+- Filled missing product subgroup values by classifying products individually (e.g. GBPUSD/EURUSD as Majors, remaining pairs as Minors)
+- Recalculated realized RRR (net profit / risk in euros), after confirming the original spreadsheet column was on a different, non-comparable scale to planned RRR
+- Inferred 7 missing trade results (W/L) from the sign of the net profit, since the financial outcome was available even though the label was missing
 
 ---
 
 ## Phase 1 – Planned vs. Realized RRR
 
 <p align="center">
-  <img src="visuals/rrr_planned_vs_realized.png" alt="Planned vs Realized RRR" width="700">
+  <img src="visuals/rrr_by_environment.png" alt="Planned vs Realized RRR" width="700">
 </p>
 
 **Key Insights:**
@@ -76,6 +85,21 @@ Key characteristics and data quality notes:
 
 ---
 
+### Interactive Dashboard
+
+
+
+---
+
+## Tools & Technologies
+
+- Python (Pandas, Matplotlib)
+- Jupyter Notebook (Google Colab)
+- Tableau Public
+- Excel
+
+---
+
 ## Conclusions
 
 - The planned RRR (2.4–3.0) suggests the strategy itself has a reasonable theoretical edge, but execution consistently fails to deliver it.
@@ -87,15 +111,8 @@ Key characteristics and data quality notes:
 
 ## Next Steps
 
-- Build an interactive dashboard (Power BI) for deeper exploration.
 - Investigate whether early exits avoided larger losses or gave up real gains, by cross-referencing trade exits with historical market price data.
 - Expand the dataset with 2022 and 2025 records, if they become available.
-
----
-
-## Project Status
-
-In progress — data cleaning and exploratory analysis complete; dashboard pending.
 
 ---
 
