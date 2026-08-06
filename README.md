@@ -27,14 +27,6 @@ Key characteristics and data quality notes:
 
 ---
 
-## Objectives
-
-- Compare planned vs. realized Risk-Reward Ratio (RRR)
-- Evaluate performance by account/environment type
-- Investigate whether performance changes immediately after a losing trade (post-loss sequence)
-
----
-
 ## Data Cleaning & Transformation
 - Translated column headers from Portuguese to English
 - Rounded monetary values to cents (account funds, risk, profit, net profit)
@@ -63,7 +55,7 @@ Key characteristics and data quality notes:
 ## Phase 2 – Performance by Environment
 
 <p align="center">
-  <img src="visuals/performance_by_environment.png" alt="Performance by Environment" width="700">
+  <img src="visuals/winrate_netprofit.png" alt="Performance by Environment" width="700">
 </p>
 
 **Key Insights:**
@@ -75,7 +67,7 @@ Key characteristics and data quality notes:
 ## Phase 3 – Post-Loss Sequence
 
 <p align="center">
-  <img src="visuals/post_loss_sequence.png" alt="Post-Loss Sequence" width="700">
+  <img src="visuals/win_rate_after_loss_and_win.png" alt="Post-Loss Sequence" width="700">
 </p>
 
 **Key Insights:**
