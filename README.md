@@ -120,7 +120,5 @@ Key characteristics and data quality notes:
 ## Author
 
 Gabriela Rijo
-
 Aspiring Data Analyst
-
 Based in Ireland
