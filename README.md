@@ -79,7 +79,7 @@ Key characteristics and data quality notes:
 
 ### Interactive Dashboard
 
-
+**[View Interactive Dashboard](https://public.tableau.com/app/profile/gabriela.rijo/viz/Tradinganalysis/TradingExecutionsAnalysis2023-2024)**
 
 ---
 
